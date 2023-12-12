@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary: #22D2A0;
+  --secondary: #192824;
+  --background: #192824;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --orange: #FF9C55;
+  --red: #FF5555;
+} 
+
+body{
+  background-image: radial-gradient(var(--secondary) 30%, var(--background) 30%);
+  background-size: 2px 3px;
+  color: var(--primary);
+  padding: 30px;
+}
+
+.title{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+input{
+  color: gray;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.instructions{
+  background-color: var(--background);
+  border: 3px solid var(--primary);
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+        20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+        40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  cursor: pointer;
+  display: block;
+  margin: 2rem auto;
+  min-height: 90px;
+  padding: 15px;
+  width: 300px;
+}
+
+.instructions p {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.instructions:hover {
+  animation: shadow-wave 1s ease infinite;
+}
+
+
+@keyframes shadow-wave {
+  0% {
+    border: 3px solid var(--primary);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+      20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+      30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+      40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  }
+  20% {
+    border: 3px solid var(--red);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--primary),
+      20px -20px 0 -3px var(--background), 20px -20px var(--green),
+      30px -30px 0 -3px var(--background), 30px -30px var(--yellow),
+      40px -40px 0 -3px var(--background), 40px -40px var(--orange);
+  }
+  40% {
+    border: 3px solid var(--orange);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--red),
+      20px -20px 0 -3px var(--background), 20px -20px var(--primary),
+      30px -30px 0 -3px var(--background), 30px -30px var(--green),
+      40px -40px 0 -3px var(--background), 40px -40px var(--yellow);
+  }
+  60% {
+    border: 3px solid var(--yellow);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--orange),
+      20px -20px 0 -3px var(--background), 20px -20px var(--red),
+      30px -30px 0 -3px var(--background), 30px -30px var(--primary),
+      40px -40px 0 -3px var(--background), 40px -40px var(--green);
+  }
+  80% {
+    border: 3px solid var(--green);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--yellow),
+      20px -20px 0 -3px var(--background), 20px -20px var(--orange),
+      30px -30px 0 -3px var(--background), 30px -30px var(--red),
+      40px -40px 0 -3px var(--background), 40px -40px var(--primary);
+  }
+  100% {
+    border: 3px solid var(--primary);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+      20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+      30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+      40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  }
+  
+}
+
+.card-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.card{
+  align-content: center;
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.card p{
+  padding: 5px;
+  text-align: center;
+}
+
+.card img{
+  max-height: 170px;
 }
